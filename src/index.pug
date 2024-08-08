@@ -1,0 +1,18 @@
+extends ./assets/html/layout
+
+block page-config
+  - let indexDir = true;
+
+block style
+  link(rel="stylesheet", href= cssDir + "top.css")
+
+block script
+  script(src= jsDir + "top.js")
+
+block content
+  main.site-main
+    section.section.section-top
+      .section-top__icon
+        img(src= imgComDir + "sasaki.png", alt="sasaki")
+      .section-top__text
+        h1 佐々木のホームページです。

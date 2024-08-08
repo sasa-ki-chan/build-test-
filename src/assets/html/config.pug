@@ -1,0 +1,34 @@
+-
+  let pageDir = indexDir ? './' : '../';
+  initPages(pages, pageDir);
+  let jsDir = pageDir + 'assets/js/';
+  let cssDir = pageDir + 'assets/css/';
+  let imgDir = pageDir + 'assets/img/';
+  let imgComDir = imgDir + 'common/';
+
+mixin navItem(pages)
+  ul.header-nav
+    each page in pages
+      li.header-nav__item
+        a( href=page.url )= page.name
+          ruby 
+            rt= page.en
+
+mixin illustItem(illusts)
+  - let illustDir = imgDir + 'oekaki/';
+  .oekaki
+    - Object.keys(illusts).forEach((postedYear) => {
+      .oekaki-list
+        h2= postedYear
+        each illust in illusts[postedYear]
+          - illust.alt = illust.alt || illust.title;
+          .oekaki-list__item
+            .oekaki-list__item--title 
+              if(illust.name)
+                h2= illust.name
+            .oekaki-list__item--img
+              img(src=illustDir + illust.src, alt=illust.alt)
+            .oekaki-list__item--text
+              if(illust.text) 
+                p= illust.text
+    - });
