@@ -374,7 +374,10 @@ th {
   font-weight: bold;
 }
 
-background html::before {
+html {
+  background: linear-gradient(rgba(38, 171, 224, 0.5), rgba(215, 54, 129, 0.5));
+}
+html::before {
   content: "";
   position: fixed;
   top: 0;

@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/assets/css/test.scss"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB","file":"src\\assets\\css\\test.scss","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}"]}
