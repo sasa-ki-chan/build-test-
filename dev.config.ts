@@ -17,6 +17,7 @@ const devConfig: Configuration = {
     extensions:[".js", ".ts", ".tsx"],
     sourcemap: true,
     minify: true,
+    web: true,
     compiledExtension: ".js"
   },
   css: {

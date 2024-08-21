@@ -70,7 +70,7 @@ const main = async (config: Required<Configuration>) => {
           buildHtml(config);
         }
         else if(config.css.extensions.includes(path.extname(filename))) {
-          buildSass(config, filename);
+          buildSass(config);
         }
         else if(config.js.extensions.includes(path.extname(filename))) {
           buildJs(config);

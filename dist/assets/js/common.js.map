@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": [],
-  "sourcesContent": [],
-  "mappings": "",
+  "sources": ["../../../src/assets/js/common.ts"],
+  "sourcesContent": ["ikopkop"],
+  "mappings": "mBAAA",
   "names": []
 }

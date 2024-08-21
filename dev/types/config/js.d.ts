@@ -30,5 +30,11 @@ export declare interface JsConfiguration {
    * `production`モードでは常に有効になります。
    */
   minify?: boolean
+
+  /**
+   * web 向けのバンドルを有効にします。無効にした場合、node 向けのバンドルが出力されます。
+   * @param true
+   */
+  web?: boolean
 }
 
