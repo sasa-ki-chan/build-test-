@@ -32,16 +32,6 @@ export declare type Illusts = {
 /** ページの情報を配列で定義します。*/
 export declare type Pages = {
 
-  /** 日本語のページ名。*/
-  name: string,
-
-  /** 英語のページ名。*/
-  en: string,
-
-  /** ページのURL。*/
-  url: string
-
-}[];
 
 /** ページの情報をオブジェクト形式で定義します。*/
 export declare type Meta = {
