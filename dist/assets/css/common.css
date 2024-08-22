@@ -380,11 +380,11 @@ th {
 
 html {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 2vw;
   background: linear-gradient(to bottom, #d844ab, #3f2ea0);
-  background-attachment: fixed;
   background-size: cover;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 html::before {
   content: "";
@@ -398,5 +398,95 @@ html::before {
   background-attachment: fixed;
   z-index: -1;
   opacity: 0.5;
+}
+
+.site-header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: #c74686;
+  overflow: hidden;
+  height: 100px;
+  width: 100%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.site-header .header-icon {
+  display: block;
+  width: 50px;
+  height: auto;
+  margin: auto 5px;
+}
+.site-header .header-icon img {
+  width: 100%;
+  height: auto;
+}
+.site-header .header-title {
+  font-size: 2.5rem;
+  margin: auto 0;
+}
+.site-header .header-line {
+  position: relative;
+  display: inline-flex;
+  align-self: center;
+  left: 10px;
+  width: 3px;
+  height: 70px;
+  background-color: #fff;
+}
+.site-header .header-nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: auto 0 auto 50px;
+  flex-direction: row;
+  padding: auto 0;
+}
+.site-header .header-nav__item {
+  margin: auto 0;
+  text-align: center;
+  transition: 0.5s;
+}
+.site-header .header-nav__item:hover {
+  color: #84edff;
+  transition: 0.5s;
+  font-size: 1.4rem;
+}
+.site-header .header-nav__item a {
+  padding: 10px 0 10px 0;
+  display: block;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.site-header .header-nav__item a ruby {
+  display: block;
+  text-align: center;
+  top: -1rem;
+  margin: auto 0;
+  font-size: 0.8rem;
+}
+.site-header .header-nav__item.current {
+  color: #84edff;
+  font-size: 1.4rem;
+  transition: 0.5s;
+}
+.site-header .header-nav__item.current div {
+  color: #84edff;
+}
+.site-header .header-nav__item.current ruby {
+  color: #84edff;
+}
+.site-header .header-nav__item.current:hover {
+  color: #84edff;
+  font-size: 1.4rem;
+  transition: 0.5s;
+}
+.site-header .header-nav__item.current:hover div {
+  color: #84edff;
+}
+.site-header .header-nav__item.current:hover ruby {
+  color: #84edff;
 }
 /*# sourceMappingURL=dist\assets\css\common.css.map */

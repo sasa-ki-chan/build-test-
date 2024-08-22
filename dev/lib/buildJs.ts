@@ -16,17 +16,17 @@ export const buildJs = async (config: Required<Configuration>) => {
   const patterns = setPatterns(config.js.patterns, config.js.extensions);
   const entries = globule.find( patterns, { srcBase: config.src, prefixBase: true } )
   try {
-    const result = await esbuild.build({
-            entryPoints: entries,
-            entryNames: '[dir]/[name]',
-            bundle: true,
-            outdir: config.dist,
-            outbase: config.src,
-            minify: config.js.minify,
-            metafile: true,
-            sourcemap: config.js.sourcemap,
-            target: config.js.web ? webTarget : nodeTarget,
-            logLevel: 'warning'
+    await esbuild.build({
+      entryPoints: entries,
+      entryNames: '[dir]/[name]',
+      bundle: true,
+      outdir: config.dist,
+      outbase: config.src,
+      minify: config.js.minify,
+      metafile: true,
+      sourcemap: config.js.sourcemap,
+      target: config.js.web ? webTarget : nodeTarget,
+      logLevel: 'warning'
     })
   }
   catch(err) {

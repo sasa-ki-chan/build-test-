@@ -29,10 +29,6 @@ export declare type Illusts = {
 };
 
 
-/** ページの情報を配列で定義します。*/
-export declare type Pages = {
-
-
 /** ページの情報をオブジェクト形式で定義します。*/
 export declare type Meta = {
   
@@ -45,7 +41,10 @@ export declare type Meta = {
   /** ページのキーワード。*/
   keywords: string,
 
+
   /** 初期化関数。 */
   init: (options: Partial<Meta>) => void
 
 };
+
+export declare type initUrl = (currentPage: string) => string;

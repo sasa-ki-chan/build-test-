@@ -29,12 +29,13 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 2vw;
+  // font-size: 2vw;
   background: linear-gradient(to bottom, #d844ab, #3f2ea0);
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-size: cover;
   height:100%;
-  
+  width:100%;
+  overflow: hidden;
 
   &::before{
       content: "";
