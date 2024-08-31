@@ -40,8 +40,8 @@ export const parseConfig = (config: Configuration) => {
   else if(config.mode !== 'production' && config.mode !== 'development') {
     config.mode = "development";
   }
-  config.src ? config.src: "src"; 
-  config.dist ? config.dist : "dist"; 
+  config.src = config.src ? config.src: "src"; 
+  config.dist = config.dist ? config.dist : "dist"; 
   //watchとdebugはデフォルトでfalseなので省略
   if(config.mode === 'production') {
     //watchは非推奨だが可能
@@ -52,13 +52,13 @@ export const parseConfig = (config: Configuration) => {
       config.css.sourcemap = false; //提出用のためオミット
     }
   } 
-  config.excludePrefix ? config.excludePrefix : ["_", "html", "data"];
+  config.excludePrefix = config.excludePrefix ? config.excludePrefix : ["_", "html", "data"];
   if(config.watchOptions) {
-    config.watchOptions.open ? config.watchOptions.open : false;
-    config.watchOptions.hot ? config.watchOptions.hot : false ;
+    config.watchOptions.open = config.watchOptions.open ? config.watchOptions.open : false;
+    config.watchOptions.hot = config.watchOptions.hot ? config.watchOptions.hot : false ;
     if(config.watchOptions.server) {
-      config.watchOptions.server.port ? config.watchOptions.server.port : 3000;
-      config.watchOptions.server.index ? config.watchOptions.server.index : "index.html";
+      config.watchOptions.server.port = config.watchOptions.server.port ? config.watchOptions.server.port : 3000;
+      config.watchOptions.server.index = config.watchOptions.server.index ? config.watchOptions.server.index : "index.html";
     }
   }
   return config as RequiredConfiguration;

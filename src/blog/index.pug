@@ -3,21 +3,21 @@ extends ../assets/html/layout
 block page-config
   - 
     const pageConfig = {
-        title: 'お問い合わせ',
+        title: 'ブログ',
         description: 'test',
         keywords: 'keyword test'
     };
     meta.init(pageConfig);
-  - const currentPage = 'contact';
+  - const currentPage = 'blog';
     
 
 block style
-  link(rel="stylesheet", href= cssDir + "contact.css")
+  link(rel="stylesheet", href= cssDir + "oekaki.css")
 
 block script
-  script(src= jsDir + "contact.js")
+  script(src= jsDir + "oekaki.js")
 
 block content
   main.site-main 
     section.section.section-oekaki
-     
+     +illustItem(illusts)

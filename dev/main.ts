@@ -12,7 +12,7 @@ import { buildHtml } from 'omochi-dev/lib/buildHtml.ts';
 import { buildJs } from 'omochi-dev/lib/buildJs.ts';
 import { buildSass } from 'omochi-dev/lib/buildSass.ts';
 import { copyImg } from 'omochi-dev/lib/copyImg.ts';
-import * as util  from 'omochi-dev/lib/utils.ts';
+import * as utils  from 'omochi-dev/lib/utils.ts';
 
 
 //user_types
@@ -40,8 +40,8 @@ options.production ? config.mode = 'production' : config.mode = 'development';
 
 
 const main = async (config: Required<Configuration>) => {
-  util.rmDir(config.dist);
-  util.mkDir(config.dist, config.src, config.excludePrefix);
+  utils.rmDir(config.dist);
+  utils.mkDir(config.dist, config.src, config.excludePrefix);
   try {
     await Promise.all([buildHtml(config), buildJs(config), buildSass(config), copyImg(config)])
     if(config.watch) {

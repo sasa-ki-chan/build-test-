@@ -1,3 +1,10 @@
+.new:before {
+  content: "new";
+  background-color: #c74686;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -384,7 +391,6 @@ html {
   background-size: cover;
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 html::before {
   content: "";
@@ -398,6 +404,13 @@ html::before {
   background-attachment: fixed;
   z-index: -1;
   opacity: 0.5;
+}
+
+.new:before {
+  content: "new";
+  background-color: #c74686;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 
 .site-header {
@@ -422,7 +435,7 @@ html::before {
   height: auto;
 }
 .site-header .header-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin: auto 0;
 }
 .site-header .header-line {
@@ -436,21 +449,22 @@ html::before {
 }
 .site-header .header-nav {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  margin: auto 0 auto 50px;
+  margin-left: auto;
+  margin-right: 100px;
   flex-direction: row;
-  padding: auto 0;
 }
 .site-header .header-nav__item {
-  margin: auto 0;
+  margin: 0 10px;
   text-align: center;
   transition: 0.5s;
+  font-size: 1.6rem;
 }
 .site-header .header-nav__item:hover {
-  color: #84edff;
   transition: 0.5s;
-  font-size: 1.4rem;
+  font-size: 1.9rem;
+  color: #84edff;
 }
 .site-header .header-nav__item a {
   padding: 10px 0 10px 0;
@@ -458,7 +472,6 @@ html::before {
   position: relative;
   color: #fff;
   text-decoration: none;
-  margin: 0 10px;
 }
 .site-header .header-nav__item a ruby {
   display: block;
@@ -469,18 +482,24 @@ html::before {
 }
 .site-header .header-nav__item.current {
   color: #84edff;
-  font-size: 1.4rem;
+  padding: 10px 0 10px 0;
+  font-size: 1.9rem;
   transition: 0.5s;
+  margin: 0 10px;
 }
 .site-header .header-nav__item.current div {
   color: #84edff;
 }
 .site-header .header-nav__item.current ruby {
+  display: block;
+  text-align: center;
+  top: -1rem;
+  margin: auto 0;
   color: #84edff;
 }
 .site-header .header-nav__item.current:hover {
   color: #84edff;
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   transition: 0.5s;
 }
 .site-header .header-nav__item.current:hover div {
@@ -488,5 +507,99 @@ html::before {
 }
 .site-header .header-nav__item.current:hover ruby {
   color: #84edff;
+}
+.site-header .header-nav__button {
+  display: none;
+}
+.site-header.is-mobile .header-nav {
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  margin-right: -240px;
+  transition: 0.5s ease;
+}
+.site-header.is-mobile .header-nav:before {
+  content: "";
+  position: fixed;
+  width: 280px;
+  margin-right: -140px;
+  height: 100%;
+  background: #c74686;
+  z-index: -1;
+}
+.site-header.is-mobile .header-nav__item {
+  margin-left: 120px;
+  margin-bottom: 30px;
+}
+.site-header.is-mobile .header-nav__item a {
+  padding: 5px 30px;
+}
+.site-header.is-mobile .header-nav__button {
+  display: block;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 10px;
+  margin-right: 240px;
+}
+.site-header.is-mobile .header-nav.open {
+  margin-right: 0px;
+  transition: 0.5s ease;
+}
+
+.new:before {
+  content: "new";
+  background-color: #c74686;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.site-footer.copyright {
+  text-align: center;
+}
+.site-footer.top-btn {
+  font-size: 10px;
+  position: absolute;
+  right: 150px;
+  min-width: 50px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 50px auto;
+  min-height: 100px;
+}
+.site-footer.top-btn .bi-capslock {
+  width: 50px;
+  height: auto;
+  fill: #fff;
+  border: 5px;
+  transition: 0.5s;
+}
+.site-footer.top-btn .bi-capslock svg {
+  width: 50px;
+  height: auto;
+  fill: #fff;
+  border: 5px;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=dist\assets\css\common.css.map */

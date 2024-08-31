@@ -11,7 +11,9 @@
   "_moduleAliaces": {
     "node_modules": "./node_modules/",
     "omochi-dev": "./dev/",
-    "data": "./dev/data/"
+    "data": "./dev/data/",
+    "miniJSX": "./dev/miniJSX",
+    "@types/miniJSX": "./dev/miniJSX/types/*.d.ts"
   },
   "dependencies": {
     "@types/globule": "^1.1.9",

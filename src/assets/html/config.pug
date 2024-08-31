@@ -1,5 +1,8 @@
 -
-  let pageDir = initUrl(currentPage);
+  let pageDir = '../';
+  if(indexDir){
+    pageDir = './';
+  }
   let jsDir = pageDir + 'assets/js/';
   let cssDir = pageDir + 'assets/css/';
   let imgDir = pageDir + 'assets/img/';
@@ -7,11 +10,14 @@
 
 mixin navItem(pages, currentPage)
   ul.header-nav
+    button.header-nav__button
+      include ../html/svg/nav.html
     each page in pages
       - if(page.id === currentPage) {
         li.header-nav__item.current
-          div= page.name
-          ruby= page.en
+          a( href="#")
+            div= page.name
+            ruby= page.en
       -  }
       - else {
         li.header-nav__item   
@@ -19,6 +25,7 @@ mixin navItem(pages, currentPage)
             div= page.name
             ruby= page.en
       -  }
+ 
 
 mixin illustItem(illusts)
   - let illustDir = imgDir + 'oekaki/';

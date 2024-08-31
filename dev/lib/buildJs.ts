@@ -19,6 +19,8 @@ export const buildJs = async (config: Required<Configuration>) => {
     await esbuild.build({
       entryPoints: entries,
       entryNames: '[dir]/[name]',
+      jsxFactory: 'miniJSX',
+      jsxFragment: 'Fragment',
       bundle: true,
       outdir: config.dist,
       outbase: config.src,

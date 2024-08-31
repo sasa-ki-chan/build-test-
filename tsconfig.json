@@ -4,16 +4,25 @@
     "paths": {
       "omochi-dev/*":["dev/*"],
       "data/*": ["dev/data/*"],
-      "dev.config": ["dev.config.ts"]
+      "dev.config": ["dev.config.ts"],
+      "miniJSX/*": 
+      [
+        "dev/miniJSX/*.ts",
+        "dev/miniJSX/*.tsx"
+      ],
+      "@types/miniJSX/*": ["dev/miniJSX/types/*.d.ts"]
     },
+    "types":["dev/miniJSX/types/JSX.d.ts"],
     "module":"NodeNext",
     "target": "es5",
-    "jsx": "preserve",                               
+    "jsx":"react",
+    "jsxFactory":"miniJSX",
+    "jsxFragmentFactory": "Fragment",                          
     "moduleResolution": "NodeNext",                  
     "baseUrl": "./",                                
     "allowImportingTsExtensions": true,               
     "resolvePackageJsonImports": true,               
-     "resolveJsonModule": true,                        
+    "resolveJsonModule": true,                        
     "allowJs": true,                                 
     "noEmit": true,                                  
     "isolatedModules": true,                                        
@@ -23,13 +32,16 @@
     "skipLibCheck": true,
     "allowArbitraryExtensions": true                       
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "ts-node": { 
     "esm": true,
     "experimentalSpecifierResolution": "node",
     "compilerOptions": {
+      "types":["dev/miniJSX/types/JSXFactory.d.ts"],
       "baseUrl": "./",  
       "target": "ESNext", 
+      "jsxFactory": "miniJSX",
+      "jsxFragmentFactory": "Fragment",
       "allowSyntheticDefaultImports": true,          
       "esModuleInterop": true,
       "module": "ESNext",                            
@@ -37,8 +49,12 @@
       "allowJs": true,
       "paths": {
         "omochi-dev/*":["dev/*"],
-        "data/*": ["dev/data/*"]
-      }
+        "data/*": ["dev/data/*"],
+        "dev.config": ["dev.config.ts"],
+        "miniJSX/*": ["dev/miniJSX/*.ts"],
+        "@types/miniJSX/*": ["dev/miniJSX/types/*.d.ts"]
+      },
+      "include": ["**/*.ts", "**/*.tsx"]
     }
   }
 }
