@@ -1,6 +1,8 @@
-export declare namespace JSX {
-  export interface ElementBasicParams  {
-    [name: string]:  HTMLElement | ElementBasicParams
+
+
+declare namespace JSX {
+  interface ElementBasicParams  {
+    [name: string]: string | HTMLElement | ElementBasicParams
   
     /**
      * クラス名を指定します。
@@ -38,11 +40,13 @@ export declare namespace JSX {
     /**
      * @description 一般的なHTML要素を指定します。
      */
-    [name: string]: keyof HTMLElementTagNameMap
+    [name: string]: ElementBasicParams
+    div: ElementBasicParams
+    h1: ElementBasicParams 
 
     /**
      * @description for文の構文を定義します。
-     * @param each 数値、もしくはオブジェクト、配列を指定します。数値を除き格納されている値の数だけ繰り返します。
+     * @param each
      * @returns HTMLElement
      * @example
      * ```tsx
@@ -53,6 +57,7 @@ export declare namespace JSX {
      */
     For(params: {each: number | object | Array}): HTMLElement
     
+
   }
 }
 

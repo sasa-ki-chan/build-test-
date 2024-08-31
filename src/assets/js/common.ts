@@ -9,5 +9,5 @@ addEventListener('DOMContentLoaded', () => {
   setUnderLine();
   scroll();
   responsive();
-  // appendTest();
+  appendTest();
 });

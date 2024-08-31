@@ -15,8 +15,6 @@ export const parseConfig = (config: Configuration) => {
     config.js = {
       patterns:["**/*", "!**/*.d", "!**/_*/**/*"],
       extensions:[".js", ".ts", ".tsx"],
-      // sourcemap: true,
-      // minify: true,
       compiledExtension: ".js"
     }
   }
