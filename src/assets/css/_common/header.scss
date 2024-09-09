@@ -4,6 +4,7 @@
   position:fixed;
   display:flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: $color-primary;
   overflow: hidden;
   height: 100px;
@@ -43,6 +44,7 @@
     margin-left: auto;
     margin-right: 100px;
     flex-direction: row;
+    jectify-content:space-between;
     &__item {
       margin:0 10px;
       text-align: center;

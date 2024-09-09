@@ -417,6 +417,7 @@ html::before {
   position: fixed;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: #c74686;
   overflow: hidden;
   height: 100px;
@@ -454,6 +455,7 @@ html::before {
   margin-left: auto;
   margin-right: 100px;
   flex-direction: row;
+  jectify-content: space-between;
 }
 .site-header .header-nav__item {
   margin: 0 10px;

@@ -1,6 +1,5 @@
 import { miniJSX } from 'miniJSX/core';
-// import { For } from 'miniJSX/utils';
-const appendMenu = () => {
+export const appendMenu = () => {
   const menu =
     <div class="menu">
       <div class="menu__item">menu1</div>

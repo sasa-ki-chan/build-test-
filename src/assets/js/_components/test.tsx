@@ -12,5 +12,5 @@ export const Test = () => {
 }
 
 export const appendTest = () => {
-  document.body.appendChild(Test())
+  return document.body.appendChild(Test())
 }

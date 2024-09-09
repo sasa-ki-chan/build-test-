@@ -4,3 +4,5 @@ const unkoList =
 <div class="container">
   <h1>wowowowowoow</h1>
 </div>
+
+document.querySelector(unkotest(unkoList))
