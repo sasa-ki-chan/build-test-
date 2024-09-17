@@ -1,0 +1,77 @@
+.new:before {
+  content: "new";
+  background-color: #c74686;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.site-main {
+  position: flex;
+  padding: 0 50px;
+  padding-top: 140px;
+}
+.site-main .section-top {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 40px;
+  font-size: 2rem;
+  min-width: 100%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: flex-start;
+  text-align: left;
+  vertical-align: middle;
+  padding: 50px -50px 50px 50px;
+}
+.site-main .section-top .top {
+  display: flex;
+}
+.site-main .section-top .top__icon {
+  display: flex;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: 100%;
+  border: none;
+  margin: auto 10px;
+  justify-content: space-around;
+}
+.site-main .section-top .top__news .news-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.site-main .section-top .top__news .news-title:before {
+  content: "";
+  border-left: 6px solid #fff;
+  font-size: 0.6em;
+  margin: 10px 5px;
+  padding-top: 5px;
+}
+.site-main .section-top .top__news .news-text {
+  margin-bottom: 20px;
+}
+.site-main .section-top .top__news .news-text__line {
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+.site-main .section-top .top__news .news-text__line:before {
+  content: "";
+  border-left: 4px solid #fff;
+  font-size: 0.6em;
+  margin: 10px 5px;
+  padding-top: 5px;
+}
+.site-main .section-top .top__news .news-date {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 70%;
+  font-size: 2.5rem;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 5px;
+}
+/*# sourceMappingURL=dist\assets\css\top.css.map */

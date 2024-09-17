@@ -1,0 +1,47 @@
+@import '../variables';
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  // height: 50px;
+  width: 100%;
+  min-width:max-content;
+  font-size: 1.2rem;
+  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  &.copyright {
+    text-align: center;
+  }
+  &.top-btn {
+    font-size: 10px;
+    position: absolute;
+    right:150px;
+    min-width: 50px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    height:50px auto;
+    min-height:100px;
+    .bi-capslock {
+      width: 50px;
+      height: auto;
+      fill: #fff;
+      border:5px;
+      transition: 0.5s;
+      svg {
+        width: 50px;
+        height: auto;
+        fill: #fff;
+        border:5px;
+        transition: 0.5s;
+      }
+    }
+  }
+}

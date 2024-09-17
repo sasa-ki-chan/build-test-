@@ -1,18 +1,31 @@
 -
-  let pageDir = indexDir ? './' : '../';
-  initPages(pages, pageDir);
+  let pageDir = '../';
+  if(indexDir){
+    pageDir = './';
+  }
   let jsDir = pageDir + 'assets/js/';
   let cssDir = pageDir + 'assets/css/';
   let imgDir = pageDir + 'assets/img/';
   let imgComDir = imgDir + 'common/';
 
-mixin navItem(pages)
+mixin navItem(pages, currentPage)
   ul.header-nav
+    button.header-nav__button
+      include ../html/svg/nav.html
     each page in pages
-      li.header-nav__item
-        a( href=page.url )= page.name
-          ruby 
-            rt= page.en
+      - if(page.id === currentPage) {
+        li.header-nav__item.current
+          a( href="#")
+            div= page.name
+            ruby= page.en
+      -  }
+      - else {
+        li.header-nav__item   
+          a( href=pageDir +  page.url )
+            div= page.name
+            ruby= page.en
+      -  }
+ 
 
 mixin illustItem(illusts)
   - let illustDir = imgDir + 'oekaki/';
@@ -24,11 +37,13 @@ mixin illustItem(illusts)
           - illust.alt = illust.alt || illust.title;
           .oekaki-list__item
             .oekaki-list__item--title 
-              if(illust.name)
-                h2= illust.name
-            .oekaki-list__item--img
-              img(src=illustDir + illust.src, alt=illust.alt)
+            - if(illust.url) {
+                h2= illust.url
+                  .oekaki-list__item--img
+                    img(src=illustDir + illust.src, alt=illust.alt)
+            -  }
             .oekaki-list__item--text
-              if(illust.text) 
-                p= illust.text
+            -  if(illust.text) {
+            p= illust.text
+            -  }
     - });

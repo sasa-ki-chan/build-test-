@@ -1,0 +1,23 @@
+extends ../assets/html/layout
+
+block page-config
+  - 
+    const pageConfig = {
+        title: '音楽',
+        description: 'test',
+        keywords: 'keyword test'
+    };
+    meta.init(pageConfig);
+  - const currentPage = 'ongaku';
+    
+
+block style
+  link(rel="stylesheet", href= cssDir + "ongaku.css")
+
+block script
+  script(src= jsDir + "ongaku.js")
+
+block content
+  main.site-main 
+    section.section.section-oekaki
+     

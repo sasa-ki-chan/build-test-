@@ -1,0 +1,23 @@
+extends ../assets/html/layout
+
+block page-config
+  - 
+    const pageConfig = {
+        title: 'ブログ',
+        description: 'test',
+        keywords: 'keyword test'
+    };
+    meta.init(pageConfig);
+  - const currentPage = 'blog';
+    
+
+block style
+  link(rel="stylesheet", href= cssDir + "oekaki.css")
+
+block script
+  script(src= jsDir + "oekaki.js")
+
+block content
+  main.site-main 
+    section.section.section-oekaki
+     +illustItem(illusts)

@@ -3,5 +3,6 @@ header.site-header
     a(href=pageDir) 
       img(src=imgComDir + "sasaki.png", alt="sasaki")
   .header-title
-    h1 佐々木のホームページ
-  +navItem(pages)
+    h1= '佐々木のホームページ' + ' / ' + pageConfig.title
+  .header-line
+  +navItem(pages, currentPage)

@@ -1,7 +1,14 @@
 extends ./assets/html/layout
 
 block page-config
-  - let indexDir = true;
+  - 
+    const pageConfig = {
+        title: 'ホーム',
+        description: 'test',
+        keywords: 'keyword test'
+    };
+  - const indexDir = true;
+  - const currentPage = 'top';
 
 block style
   link(rel="stylesheet", href= cssDir + "top.css")
@@ -12,7 +19,13 @@ block script
 block content
   main.site-main
     section.section.section-top
-      .section-top__icon
-        img(src= imgComDir + "sasaki.png", alt="sasaki")
-      .section-top__text
-        h1 佐々木のホームページです。
+      .top
+        .top__icon
+          img(src= imgComDir + "sasaki.png", alt="sasaki")
+        .top__news
+          h2.news-title 佐々木のウェブサイトへようこそ！
+          p.news-text 
+            .news-text__line Twitter(X):
+              a(class="news-link" href="https://x.com/sasa_ki____")  @sasa_ki____
+          .new.news-date 2024.08.23
+            
