@@ -1,0 +1,82 @@
+.new:before {
+  content: "new";
+  background-color: #c74686;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.site-main .section-oekaki .oekaki-list {
+  margin-bottom: 20px;
+}
+.site-main .section-oekaki .oekaki-list__year {
+  font-size: 3rem;
+  border-bottom: 4px solid #ffffff;
+  margin-bottom: 50px;
+}
+.site-main .section-oekaki .oekaki-list__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  justify-content: center;
+  gap: 5px;
+  transition: 5ms;
+}
+.site-main .section-oekaki .oekaki-list__box .box-item {
+  text-align: center;
+  transition: 0.5s;
+}
+.site-main .section-oekaki .oekaki-list__box .box-item :hover {
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+.site-main .section-oekaki .oekaki-list__box .box-item img {
+  height: 300px;
+  width: auto;
+  margin-bottom: 50px;
+}
+
+body.is-fixed {
+  overflow: hidden;
+}
+
+.site-main .modal {
+  display: none;
+  opacity: 0;
+}
+.site-main .modal.open {
+  opacity: 1;
+  transition: 5ms;
+  display: block;
+  position: fixed;
+  z-index: 100;
+  height: 500px;
+  width: 70%;
+  text-align: center;
+}
+.site-main .modal.open .modal__bg {
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.site-main .modal.open .modal__content {
+  transition: 0.5s;
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 101;
+}
+.site-main .modal.open .modal__content img {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=dist\assets\css\oekaki.css.map */
