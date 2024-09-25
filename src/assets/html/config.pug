@@ -32,18 +32,13 @@ mixin illustItem(illusts)
   .oekaki
     - Object.keys(illusts).forEach((postedYear) => {
       .oekaki-list
-        h2= postedYear
-        each illust in illusts[postedYear]
-          - illust.alt = illust.alt || illust.title;
-          .oekaki-list__item
-            .oekaki-list__item--title 
-            - if(illust.url) {
-                h2= illust.url
-                  .oekaki-list__item--img
-                    img(src=illustDir + illust.src, alt=illust.alt)
-            -  }
-            .oekaki-list__item--text
-            -  if(illust.text) {
-            p= illust.text
-            -  }
+        h2.oekaki-list__year= postedYear
+        .oekaki-list__box
+          each illust in illusts[postedYear]
+            - illust.alt = illust.alt || illust.title;
+            .box-item
+              - if(illust.src) {
+                  .box-item__img
+                    img(src=illustDir + illust.src, alt=illust.alt data-id=illust.id)
+              - }
     - });

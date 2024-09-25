@@ -61,5 +61,3 @@ export function miniJSX(
   return $element;
 }
 
-// miniJSX("div", { class: "testing" }, miniJSX("div", { class: "test" }), miniJSX("h1", null, "Test")), f = () => { document.body.appendChild(x()) }
-

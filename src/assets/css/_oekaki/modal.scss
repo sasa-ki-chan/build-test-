@@ -27,7 +27,10 @@ body.is-fixed {
       .modal__content {
         transition: 0.5s;
         background-color:$color-wh;
+        display:flex;
         position:fixed;
+        align-items:flex-end;
+        flex-direction: column;
         top:50%;
         left:50%;
         transform:translate(-50%,-50%);

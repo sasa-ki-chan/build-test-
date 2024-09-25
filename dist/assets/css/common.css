@@ -388,6 +388,7 @@ th {
 html {
   font-family: "Noto Sans JP", sans-serif;
   background: linear-gradient(to bottom, #d844ab, #3f2ea0);
+  background-attachment: fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -423,6 +424,7 @@ html::before {
   width: 100%;
   min-width: -moz-max-content;
   min-width: max-content;
+  z-index: 10;
 }
 .site-header .header-icon {
   display: block;
@@ -541,9 +543,10 @@ html::before {
 .site-header.is-mobile .header-nav__button {
   display: block;
   color: #fff;
+  background: #c74686;
   cursor: pointer;
   padding: 10px 10px;
-  margin-right: 240px;
+  margin-right: 220px;
 }
 .site-header.is-mobile .header-nav.open {
   margin-right: 0px;

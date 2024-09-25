@@ -10,7 +10,7 @@
 }
 .site-main .section-oekaki .oekaki-list__year {
   font-size: 3rem;
-  border-bottom: 4px solid #ffffff;
+  border-bottom: 4px solid #fff;
   margin-bottom: 50px;
 }
 .site-main .section-oekaki .oekaki-list__box {
@@ -21,8 +21,10 @@
   transition: 5ms;
 }
 .site-main .section-oekaki .oekaki-list__box .box-item {
+  margin-top: 50px;
   text-align: center;
   transition: 0.5s;
+  margin-top: 50px;
 }
 .site-main .section-oekaki .oekaki-list__box .box-item :hover {
   transition: 0.5s;
@@ -31,7 +33,6 @@
 .site-main .section-oekaki .oekaki-list__box .box-item img {
   height: 300px;
   width: auto;
-  margin-bottom: 50px;
 }
 
 body.is-fixed {
@@ -64,8 +65,11 @@ body.is-fixed {
 }
 .site-main .modal.open .modal__content {
   transition: 0.5s;
-  background-color: #ffffff;
+  background-color: #fff;
+  display: flex;
   position: fixed;
+  align-items: flex-end;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

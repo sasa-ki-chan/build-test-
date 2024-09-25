@@ -92,6 +92,7 @@ const main = async (config: Required<Configuration>) => {
     catch(err) {
       if(err instanceof Error) {
         log.error('Error processing file change');
+        if(filename != null) log.errorMsg(`File: ${filename}`);
         log.errorMsg(err.message);
       } 
     };

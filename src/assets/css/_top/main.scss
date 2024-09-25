@@ -12,11 +12,13 @@
     width: 100%;
     height:fit-content;
     align-items: flex-start;
+    justify-content: center;
     text-align: left;
     vertical-align: middle;
     padding:50px -50px 50px 50px;
     .top {
       display: flex;
+      justify-content: center;
       &__icon {
         display: flex;
         max-width: fit-content;

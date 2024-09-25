@@ -22,12 +22,14 @@
   height: -moz-fit-content;
   height: fit-content;
   align-items: flex-start;
+  justify-content: center;
   text-align: left;
   vertical-align: middle;
   padding: 50px -50px 50px 50px;
 }
 .site-main .section-top .top {
   display: flex;
+  justify-content: center;
 }
 .site-main .section-top .top__icon {
   display: flex;

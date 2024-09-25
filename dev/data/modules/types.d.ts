@@ -21,8 +21,9 @@ export declare type Illusts = {
     /** イラストのalt属性。*/
     alt?: string,
 
-    /** イラストの説明。*/
-    text?: string
+    text?: string,
+
+    id: string,
 
   }[]
 

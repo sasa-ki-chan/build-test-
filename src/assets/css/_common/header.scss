@@ -9,6 +9,7 @@
   height: 100px;
   width: 100%;
   min-width:max-content;
+  z-index:10;
   
   .header-icon {
     display: block;
@@ -33,7 +34,7 @@
     left:10px;
     width: 3px;
     height: 70px;
-    background-color: #fff;
+    background-color: $color-wh;
   }
   .header-nav {
     position: relative;
@@ -57,7 +58,7 @@
         padding:10px 0 10px 0;
         display: block;
         position: relative;
-        color: #fff;
+        color: $color-wh;
         text-decoration: none;
         // margin: 0 -7px;
         //ルビ
@@ -133,10 +134,11 @@
       }
       &__button {
         display:block;
-        color: #fff;
+        color: $color-wh;
+        background: $color-primary;
         cursor: pointer;
         padding: 10px 10px;
-        margin-right:240px;
+        margin-right:220px;
       }
       &.open {
         margin-right: 0px;

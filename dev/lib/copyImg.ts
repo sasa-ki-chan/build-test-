@@ -13,7 +13,7 @@ export const copyImg = async (config: Required<Configuration>) => {
   const patterns = setPatterns(config.img.patterns, config.img.extensions);
   const files = globule.find(patterns, { srcBase: config.src, prefixBase: true });
   for(let i = 0; i < files.length; i++) {
-    const dist = files[i].replace(config.src, config.dist);
+    const dist = files[i].replace(config.src, config.dist)
     fs.copyFileSync(files[i], dist);
     log.built(dist, files[i]);
   }
