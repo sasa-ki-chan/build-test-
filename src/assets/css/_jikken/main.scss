@@ -1,0 +1,22 @@
+.site-main {
+  .section-jikken {
+    padding-top:150px;
+    display:flex;
+    font-size:2.5rem;
+    #game-id {
+      height:600px;
+      width:350px;
+      border-width: 5px;
+    }
+    jikken-scoreboard {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      .danmaku-scoreboard {
+        font-size:2.5rem;
+      }
+    }
+  }
+}

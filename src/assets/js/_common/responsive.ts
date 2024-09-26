@@ -24,11 +24,6 @@ const responsive = () => {
       $header.classList.add('is-mobile');
       $headerNav.style.transition = 'none';
       $headerLine.style.display = 'none';
-
-      // if(window.innerWidth < mobileBreakpoint) {
-      //   $body.classList.remove('is-tablet');
-      //   $body.classList.add('is-mobile');
-      // }
     } else {
       $body.classList.remove('is-mobile');
       $header.classList.remove('is-mobile');
@@ -40,7 +35,7 @@ const responsive = () => {
     $headerNav.classList.toggle('open');
     $headerNav.attributes.removeNamedItem('style');
   })
-  //headdder-nav以外をクリックしたらメニューを閉じる
+  //header-nav以外をクリックしたらメニューを閉じる
   document.addEventListener('click', (e) => {
     if(!e.target) return;
     const target = e.target as HTMLElement;
